@@ -1,4 +1,4 @@
-import { Container, Row, Col, Card, CardBody } from "reactstrap";
+import { Container, Row, Col, Card, CardBody, Button } from "reactstrap";
 import SignupForm from "./SignupForm";
 
 const HomeSection = () => {
@@ -13,7 +13,7 @@ const HomeSection = () => {
                         </h1>
                         <div className="d-flex">
                             <div className="pt-4 mt-4 algin-self-start">
-                                <i className="fa fa-archive fa-2x"></i>
+                                <i className="fa fa-archive fa-2x text-orange"></i>
                             </div>
                             <div className="p-4 mt-4 align-self-end">
                                 Explore a vast repository of guides which have
@@ -23,7 +23,7 @@ const HomeSection = () => {
                         </div>
                         <div className="d-flex">
                             <div className="pt-4 mt-4 algin-self-start">
-                                <i className="fa fa-comment fa-2x"></i>
+                                <i className="fa fa-comment fa-2x text-orange"></i>
                             </div>
                             <div className="p-4 mt-4 align-self-end">
                                 Contribute to existing{" "}
@@ -40,7 +40,7 @@ const HomeSection = () => {
                         </div>
                         <div className="d-flex">
                             <div className="pt-4 mt-4 algin-self-start">
-                                <i className="fa fa-heart fa-2x"></i>
+                                <i className="fa fa-heart fa-2x text-orange"></i>
                             </div>
                             <div className="p-4 mt-4 align-self-end">
                                 Promote other users' content to help link
@@ -63,10 +63,20 @@ const HomeSection = () => {
                                     </label>
                                 </p>
                                 <SignupForm />
-                                <p><small>By registerin an account you agree to and aknowledge our <a href='#'>Terms of Service</a> and site <a href='#'>Rules</a>.</small></p>
+                                <p>
+                                    <small>
+                                        By registerin an account you agree to
+                                        and aknowledge our{" "}
+                                        <a href="#">Terms of Service</a> and
+                                        site <a href="#">Rules</a>.
+                                    </small>
+                                </p>
                             </CardBody>
                         </Card>
                     </Col>
+                </Row>
+                <Row>
+                    <Button outline color='light' id='learn-btn'>See what's popular</Button>
                 </Row>
             </Container>
         </header>

@@ -12,6 +12,10 @@ body {
   background: rgb(18,35,43);
 }
 
+.text-orange {
+  color: #d1671b;
+}
+
 .navbar {
   background: rgba(13,20,31,.8);
   border-bottom: #915110 solid 1px;
@@ -30,6 +34,31 @@ body {
   padding-top: 110px;
 }
 
+.header-link {
+  text-decoration: none;
+  color: #d1671b;
+}
+
+.header-link:hover {
+  text-decoration: none;
+  color: #f5ab5f;
+}
+
 .signup-card {
   background: rgba(13,20,31,0.8) !important;
+}
+
+.signup-error {
+  margin-bottom: 0 !important;
+}
+
+#learn-btn {
+  margin-top: 5rem;
+  background: rgba(13,20,31,0.8);
+}
+
+#learn-btn:hover {
+  background: #f8f9fa;
+  color: #000;
+  opacity: 90%;
 }
