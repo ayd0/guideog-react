@@ -31,6 +31,7 @@ export const hideSignupErrors = (e) => {
         }
         selected = selected.parentNode;
     }
+    
     for (const error of errors) {
         error.style.display = 'none';
     }
