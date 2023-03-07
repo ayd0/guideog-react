@@ -1,6 +1,6 @@
 import { Button, Col, FormGroup } from "reactstrap";
 import { Formik, Field, Form, ErrorMessage } from "formik";
-import validateSignupForm from "../utils/validateSignupForm";
+import { validateSignupForm, clearSignupErrors } from "../utils/validateSignupForm";
 
 const SignupForm = () => {
     const handleSubmit = (values, { resetForm }) => {
@@ -8,6 +8,8 @@ const SignupForm = () => {
         console.log("in JSON format:", JSON.stringify(values));
         resetForm();
     };
+
+    const conditionalValidation = validateSignupForm;
 
     // Add click handling for signup error messages when an item outside the signup card is clicked it will set their display to none, and block when it is clicked
     // This may be able to be achieved by calling resetForm()
@@ -20,7 +22,7 @@ const SignupForm = () => {
                 confirmPassword: "",
             }}
             onSubmit={handleSubmit}
-            validate={validateSignupForm}
+            validate={conditionalValidation}
         >
             <Form>
                 <FormGroup row>

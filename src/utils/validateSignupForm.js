@@ -1,4 +1,4 @@
-const validateSignupForm = (values) => {
+export const validateSignupForm = (values) => {
     const errors = {};
 
     if (!values.email) {
@@ -9,7 +9,7 @@ const validateSignupForm = (values) => {
         errors.password = 'Password required.'
     }
 
-    if (!values.confirmPassword) {
+    if (!values.confirmPassword && values.password) {
         errors.confirmPassword = 'You must confirm your password.';
     } else if (values.confirmPassword !== values.password) {
         errors.confirmPassword = 'Passwords must match.';
@@ -18,4 +18,20 @@ const validateSignupForm = (values) => {
     return errors;
 };
 
-export default validateSignupForm;
+export const hideSignupErrors = (e) => {
+    let selected = e.target;
+    const errors = document.querySelectorAll('.signup-error');
+
+    while (selected) {
+        if (`${selected.className}`.includes('signup-card')) {
+            for (const error of errors) {
+                error.style.display = 'block';
+            }
+            return;
+        }
+        selected = selected.parentNode;
+    }
+    for (const error of errors) {
+        error.style.display = 'none';
+    }
+};
