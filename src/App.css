@@ -21,8 +21,9 @@ body {
   border-bottom: #915110 solid 1px;
 }
 
-.navbar .container {
-  display: flex;
+.navbar .container-fluid {
+  /* padding-left: 16vw;
+  padding-right: 16vw; */
 }
 
 .navbar-brand img {
