@@ -1,5 +1,6 @@
 import { Container, Row, Col, Card, CardBody, Button } from "reactstrap";
 import SignupForm from "./SignupForm";
+import LoginModal from "./LoginModal";
 
 const HomeSection = () => {
     return (
@@ -78,6 +79,7 @@ const HomeSection = () => {
                 <Row>
                     <Button outline color='light' id='learn-btn'>See what's popular</Button>
                 </Row>
+                <LoginModal />
             </Container>
         </header>
     );

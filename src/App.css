@@ -40,6 +40,23 @@ body {
   max-width: 150px;
 }
 
+.btn-login {
+  background: #d1671b !important;
+  color: #fff;
+  width: 70px;
+  margin-left: 1rem;
+  border: none;
+}
+
+.xs-btn-login {
+  margin-left: auto !important;
+  margin-right: .5em;
+}
+
+.btn-login:hover {
+  background: #f5ab5f !important;
+}
+
 .home-inner {
   padding-top: 110px;
 }
