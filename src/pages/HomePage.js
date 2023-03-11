@@ -1,7 +1,7 @@
 import { Container } from "reactstrap";
 import HomeNav from "../components/HomeNav";
 import HomeSection from "../components/HomeSection";
-import ExploreSection from "../components/ExploreSection";
+import ExploreSection from '../features/explore/ExploreSection';
 import { hideSignupErrors } from "../utils/validateSignupForm";
 
 const HomePage = () => {

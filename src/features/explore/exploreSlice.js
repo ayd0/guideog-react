@@ -44,5 +44,5 @@ const exploreSlice = createSlice({
 export const exploreReducer = exploreSlice.reducer;
 
 export const getNewCategories = (state) => {
-    return state.explore.exploreArray.filter(item => item.listType='categories-new');
+    return state.explore.exploreArray;
 };

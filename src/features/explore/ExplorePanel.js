@@ -1,6 +1,11 @@
 import { Col, Navbar, NavItem, Nav, NavLink, Button } from "reactstrap"
+import { useSelector } from "react-redux";
+import { getNewCategories } from "./exploreSlice";
 
 const ExplorePanel = ({ header }) => {
+  const items = useSelector((state) => getNewCategories(state));
+  const newCategories = items.filter(item => item.listType === 'categories-new');
+
   return (
       <Col lg="6" className="text-center">
           <h2 class="display-4">{header}</h2>
