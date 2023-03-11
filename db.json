@@ -1,0 +1,94 @@
+{
+    "explore": [
+        {
+            "id": 0,
+            "listType": "categories-new",
+            "name": "C/ Programming"
+        },
+        {
+            "id": 1,
+            "listType": "categories-new",
+            "name": "C/ Cooking"
+        },
+        {
+            "id": 2,
+            "listType": "categories-new",
+            "name": "C/ Gardening"
+        },
+        {
+            "id": 3,
+            "listType": "categories-new",
+            "name": "C/ Car Maintenence"
+        },
+        {
+            "id": 4,
+            "listType": "categories-new",
+            "name": "C/ Travel"
+        },
+        {
+            "id": 5,
+            "listType": "categories-new",
+            "name": "C/ Home Decorating"
+        },
+        {
+            "id": 6,
+            "listType": "categories-new",
+            "name": "C/ Game Design"
+        },
+        {
+            "id": -1,
+            "listType": "categories-rising",
+            "name": "c/ Some Category"
+        },
+        {
+            "id": -1,
+            "listType": "categories-top",
+            "name": "c/ Some Other Category"
+        },
+        {
+            "id": 0,
+            "listType": "guides-new",
+            "name": "g/ Bootstrap: Mastering Grid & Flexbox"
+        },
+        {
+            "id": 1,
+            "listType": "guides-new",
+            "name": "g/ Making Ramsay's Burger"
+        },
+        {
+            "id": 2,
+            "listType": "guides-new",
+            "name": "g/ Strike the Earth: Grow Some Potatoes"
+        },
+        {
+            "id": 3,
+            "listType": "guides-new",
+            "name": "g/ How to Change Your Oil"
+        },
+        {
+            "id": 4,
+            "listType": "guides-new",
+            "name": "g/ Must See Spots in Seoul"
+        },
+        {
+            "id": 5,
+            "listType": "guides-new",
+            "name": "g/ Making your Home Office a Vivarium"
+        },
+        {
+            "id": 6,
+            "listType": "guides-new",
+            "name": "g/ Unity for Winners"
+        },
+        {
+            "id": -1,
+            "listType": "guides-rising",
+            "name": "c/ Some Guide"
+        },
+        {
+            "id": -1,
+            "listType": "guides-top",
+            "name": "c/ Some Other Guide"
+        }
+    ]
+}

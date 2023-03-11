@@ -89,3 +89,14 @@ body {
   color: #000;
   opacity: 90%;
 }
+
+#explore {
+  color: #fff;
+  margin-top: 6rem;
+}
+
+.explore-sub {
+  background: rgb(18,35,43);
+  border-radius: 15px;
+  position: relative;
+}
