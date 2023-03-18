@@ -1,6 +1,6 @@
 import { Button, Col, FormGroup } from "reactstrap";
 import { Formik, Field, Form, ErrorMessage } from "formik";
-import { validateSignupForm, clearSignupErrors } from "../utils/validateSignupForm";
+import { validateSignupForm } from "../utils/validateSignupForm";
 
 const SignupForm = () => {
     const handleSubmit = (values, { resetForm }) => {

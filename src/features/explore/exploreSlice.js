@@ -71,6 +71,6 @@ const exploreSlice = createSlice({
 
 export const exploreReducer = exploreSlice.reducer;
 
-export const getExploreList = (state) => {
-    return state.explore.exploreArray;
+export const selectExploreListById = (id) => (state) => {
+    return state.explore.exploreArray[id];
 };

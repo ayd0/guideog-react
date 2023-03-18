@@ -5,8 +5,8 @@ const ExploreSection = () => {
   return (
       <Container id='explore'>
           <Row>
-              <ExplorePanel header="Categories" />
-              <ExplorePanel header="Guides" />
+              <ExplorePanel header="Categories" id={0} />
+              <ExplorePanel header="Guides" id={1} />
           </Row>
       </Container>
   );
