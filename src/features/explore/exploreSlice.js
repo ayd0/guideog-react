@@ -21,6 +21,34 @@ const initialState = {
     errMsg: ''
 };
 
+// seperate state into 2d array for easier button handling
+const handleExploreArrayState = (payload) => {
+    const listTypes = parseInt(payload[0].listTypes);
+    payload.shift();
+
+    let stateSections = [];
+    let counter = 0;
+
+    for (let i = 0; i < listTypes; ++i) {
+        if (counter < payload.length) {
+            const listType = payload[counter].listType;
+            let section = [];
+
+            while (
+                counter < payload.length &&
+                listType === payload[counter].listType
+            ) {
+                section.push(payload[counter].itemName);
+                ++counter;
+            }
+
+            stateSections.push(section);
+        }
+    }
+
+    return stateSections;
+};
+
 const exploreSlice = createSlice({
     name: "explore",
     initialState,
@@ -32,7 +60,7 @@ const exploreSlice = createSlice({
         [fetchExploreList.fulfilled]: (state, action) => {
             state.isLoading = false;
             state.errMsg = '';
-            state.exploreArray = action.payload;
+            state.exploreArray = handleExploreArrayState(action.payload);
         },
         [fetchExploreList.rejected]: (state, action) => {
             state.isLoading = false;
@@ -43,6 +71,6 @@ const exploreSlice = createSlice({
 
 export const exploreReducer = exploreSlice.reducer;
 
-export const getNewCategories = (state) => {
+export const getExploreList = (state) => {
     return state.explore.exploreArray;
 };

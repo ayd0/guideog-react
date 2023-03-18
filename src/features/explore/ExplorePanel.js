@@ -1,11 +1,7 @@
 import { Col, Navbar, NavItem, Nav, NavLink, Button } from "reactstrap"
-import { useSelector } from "react-redux";
-import { getNewCategories } from "./exploreSlice";
+import ExploreList from "./ExploreList";
 
 const ExplorePanel = ({ header }) => {
-  const items = useSelector((state) => getNewCategories(state));
-  const newCategories = items.filter(item => item.listType === 'categories-new');
-
   return (
       <Col lg="6" className="text-center">
           <h2 class="display-4">{header}</h2>
@@ -30,7 +26,7 @@ const ExplorePanel = ({ header }) => {
               </Nav>
             </Navbar>
             <div id={`${header.toLowerCase()}-sub`}>
-              <Button block className='text-left'>c/ Programming</Button>
+              <ExploreList header={header.toLowerCase()} />
             </div>
           </div>
       </Col>

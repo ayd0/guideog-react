@@ -65,7 +65,7 @@ const HomeSection = () => {
                                 <SignupForm />
                                 <p>
                                     <small>
-                                        By registerin an account you agree to
+                                        By registering an account you agree to
                                         and aknowledge our{" "}
                                         <a href="#">Terms of Service</a> and
                                         site <a href="#">Rules</a>.
