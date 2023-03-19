@@ -4,6 +4,14 @@ body {
   overflow-x: hidden;
 }
 
+#home-overlay {
+  background: rgb(13,20,31);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 210vh;
+}
+
 .main-overlay {
   position: absolute;
   top: 0;
@@ -99,18 +107,44 @@ body {
   margin-top: 6rem;
 }
 
-.explore-sub {
-  background: rgb(18,35,43);
-  border-radius: 15px;
-  position: relative;
+.explore-nav {
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  background: rgba(13,20,31,0.15);
 }
 
 .explore-nav .nav-link:hover {
   cursor: pointer;
+  color: rgba(255,255,255,.75);
+}
+
+.explore-nav .nav-link {
+  color: rgba(255,255,255,.5);
+}
+
+.explore-nav .nav-link .link-active {
+  color: #fff !important;
 }
 
 .explore-nav .nav-link i {
   font-size: 1.3em;
+  margin-left: .5rem;
+}
+
+.left-link {
+  margin-right: 2rem;
+}
+
+.right-link {
+  margin-left: 2rem;
+}
+
+.explore-sub {
+  background: rgb(18,35,43);
+  border-top: 1px solid #915110;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: relative;
 }
 
 .explore-btn {
