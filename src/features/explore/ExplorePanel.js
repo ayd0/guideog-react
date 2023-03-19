@@ -1,8 +1,9 @@
+import { useSelector } from "react-redux";
 import { Col, Navbar, NavItem, Nav, NavLink } from "reactstrap"
 import ExploreList from "./ExploreList";
 
 const ExplorePanel = ({ header, id }) => {
-  const updateListItems = (id) => <ExploreList id={id} /> 
+  const updateListItems = (id) => <ExploreList id={id} />; 
 
   let listItems = updateListItems(id *= 3);
 

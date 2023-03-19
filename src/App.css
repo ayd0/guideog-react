@@ -9,7 +9,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 110%;
+  min-height: 210vh;
   background: rgb(18,35,43);
 }
 
@@ -55,6 +55,10 @@ body {
 
 .btn-login:hover {
   background: #f5ab5f !important;
+}
+
+#home-section {
+  height: 100vh;
 }
 
 .home-inner {
@@ -107,4 +111,28 @@ body {
 
 .explore-nav .nav-link i {
   font-size: 1.3em;
+}
+
+.explore-btn {
+  text-align: left !important;
+  padding-left: 3rem !important;
+  margin-top: .5rem;
+}
+
+.btn-stagger {
+  background: none !important;
+}
+
+#home-footer {
+  color: #fff;
+  background-image: linear-gradient(rgb(18,35,43), rgb(13,20,31));
+  border-top: 1px solid #0a151a;
+  padding: 50px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+#footer-logo {
+  width: 22px;
 }
