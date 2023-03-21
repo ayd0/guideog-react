@@ -20,7 +20,7 @@ const ExploreList = ({ id }) => {
                 })
             ) : (
                 <Col key={++uuid}>
-                    <Button block>Error: Failed to Load Content</Button>
+                    <h4 className='display-4'>ERROR: unable to fetch data</h4>
                 </Col>
             )}
         </>
