@@ -1,11 +1,13 @@
-import { useSelector } from "react-redux";
+import { useState } from "react";
 import { Col, Navbar, NavItem, Nav, NavLink } from "reactstrap";
 import ExploreList from "./ExploreList";
 
 const ExplorePanel = ({ header, id }) => {
-    const updateListItems = (id) => <ExploreList id={id} />;
+    const updateListItems = (id) => {
+       setListItems(<ExploreList id={id} />);
+    }
 
-    let listItems = updateListItems((id *= 3));
+    const [listItems, setListItems] = useState(<ExploreList id={id *= 3} />);
 
     return (
             <Col lg="6" className="text-center">
@@ -15,7 +17,7 @@ const ExplorePanel = ({ header, id }) => {
                         <Nav id={header.toLowerCase()} className="mx-auto">
                             <NavItem
                                 onClick={() =>
-                                    (listItems = updateListItems(id))
+                                    (updateListItems(id))
                                 }
                             >
                                 <NavLink>
@@ -26,7 +28,7 @@ const ExplorePanel = ({ header, id }) => {
                             </NavItem>
                             <NavItem
                                 onClick={() =>
-                                    (listItems = updateListItems(id + 1))
+                                    (updateListItems(id + 1))
                                 }
                             >
                                 <NavLink>
@@ -38,7 +40,7 @@ const ExplorePanel = ({ header, id }) => {
                             </NavItem>
                             <NavItem
                                 onClick={() =>
-                                    (listItems = updateListItems(id + 2))
+                                    (updateListItems(id + 2))
                                 }
                             >
                                 <NavLink>
