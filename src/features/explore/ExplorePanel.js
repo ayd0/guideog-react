@@ -16,13 +16,15 @@ const ExplorePanel = ({ header, id }) => {
 
     const setActive = (e) => {
         let tar;
-        e.target.nodeName === "I"
-            ? (tar = e.target.parentNode)
-            : e.target.nodeName === "A"
-            ? (tar = e.target.children[0])
-            : (tar = e.target);
+        if (e.target.nodeName === "I") {
+            tar = e.target.parentNode;
+        } else if (e.target.nodeName === "A") {
+            tar = e.target.children[0];
+        } else {
+            tar = e.target;
+        }
         removeActives();
-        tar.classList.add('link-active');
+        tar.classList.add("link-active");
     }
 
     const [listItems, setListItems] = useState(<ExploreList id={(id *= 3)} />);
