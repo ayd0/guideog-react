@@ -8,11 +8,11 @@ const ExplorePanel = ({ header, id }) => {
     };
 
     const removeActives = () => {
-        let links = document.querySelectorAll(`#${header.toLowerCase()} h5`)
+        let links = document.querySelectorAll(`#${header.toLowerCase()} h5`);
         for (let link of links) {
-            link.classList.remove('link-active')
+            link.classList.remove("link-active");
         }
-    }
+    };
 
     const setActive = (e) => {
         let tar;
@@ -25,7 +25,7 @@ const ExplorePanel = ({ header, id }) => {
         }
         removeActives();
         tar.classList.add("link-active");
-    }
+    };
 
     const [listItems, setListItems] = useState(<ExploreList id={(id *= 3)} />);
 
@@ -35,30 +35,36 @@ const ExplorePanel = ({ header, id }) => {
             <div>
                 <Navbar dark expand className="explore-nav">
                     <Nav id={header.toLowerCase()} className="mx-auto">
-                        <NavItem onClick={(e) => {
-                            updateListItems(id);
-                            setActive(e);
-                        }}>
+                        <NavItem
+                            onClick={(e) => {
+                                updateListItems(id);
+                                setActive(e);
+                            }}
+                        >
                             <NavLink>
                                 <h5 className="d-flex align-items-center link-active left-link">
                                     New <i className="fa fa-tag fa-2x" />
                                 </h5>
                             </NavLink>
                         </NavItem>
-                        <NavItem onClick={(e) => {
-                            updateListItems(id + 1);
-                            setActive(e);
-                        }}>
+                        <NavItem
+                            onClick={(e) => {
+                                updateListItems(id + 1);
+                                setActive(e);
+                            }}
+                        >
                             <NavLink>
                                 <h5 className="d-flex align-items-center">
                                     Rising <i className="fa fa-rocket fa-2x" />
                                 </h5>
                             </NavLink>
                         </NavItem>
-                        <NavItem onClick={(e) => {
-                            updateListItems(id + 2);
-                            setActive(e);
-                        }}>
+                        <NavItem
+                            onClick={(e) => {
+                                updateListItems(id + 2);
+                                setActive(e);
+                            }}
+                        >
                             <NavLink>
                                 <h5 className="d-flex align-items-center right-link">
                                     Top <i className="fa fa-area-chart fa-2x" />

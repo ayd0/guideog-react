@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import {
     Navbar,
     NavbarBrand,
@@ -33,12 +34,12 @@ const HomeNav = () => {
                     <Collapse isOpen={menuOpen} navbar>
                         <Nav className="ms-auto" navbar>
                             <NavItem>
-                                <a href="/" class="nav-link active">
+                                <a href="#" class="nav-link active">
                                     Home
                                 </a>
                             </NavItem>
                             <NavItem>
-                                <a href="/" class="nav-link">
+                                <a href="#explore-break" class="nav-link">
                                     Explore
                                 </a>
                             </NavItem>
@@ -48,9 +49,9 @@ const HomeNav = () => {
                                 </a>
                             </NavItem>
                             <NavItem>
-                                <a href="/" class="nav-link">
+                                <Link className="nav-link" to="/main">
                                     Main
-                                </a>
+                                </Link>
                             </NavItem>
                             <NavItem>
                                 <Button className="btn-login btn-sm mt-1 d-none d-sm-block">

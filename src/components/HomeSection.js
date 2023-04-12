@@ -44,7 +44,7 @@ const HomeSection = () => {
                             </div>
                             <div className="p-4 mt-4 align-self-end">
                                 Promote other users' content to help link
-                                together incredible guides in the best ordser
+                                together incredible guides in the best order
                                 possible.
                             </div>
                         </div>
@@ -79,6 +79,7 @@ const HomeSection = () => {
                     <Button outline color='light' id='learn-btn'>See what's popular</Button>
                 </Row>
             </Container>
+            <div id='explore-break'></div>
         </header>
     );
 };

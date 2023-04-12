@@ -1,4 +1,3 @@
-import { Container } from "reactstrap";
 import { useEffect } from "react";
 import HomeNav from "../components/HomeNav";
 import HomeSection from "../components/HomeSection";
