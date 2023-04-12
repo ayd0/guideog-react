@@ -26,7 +26,7 @@ export const leftSidebarData = () => [
         direction: 'left',
         icon: sidebarIcon,
     }
-]
+];
 
 export const rightSidebarData = () => [
     {
@@ -54,4 +54,4 @@ export const rightSidebarData = () => [
         direction: 'right',
         icon: sidebarIcon,
     }
-]
+];

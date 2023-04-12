@@ -3,7 +3,7 @@ import Sidebar from '../components/Sidebar';
 import { leftSidebarData, rightSidebarData } from '../components/data/SidebarData';
 
 const MainPage = () => {
-    document.body.style = 'background: rgb(18,35,43);'
+    document.body.style = 'background: rgb(13,25,31);'
     return (
         <>
             <Sidebar direction='left' sidebarData={leftSidebarData} />
