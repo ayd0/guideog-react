@@ -5,6 +5,14 @@ export const leftSidebarData = () => [
         title: 'Title1',
         direction: 'left',
         icon: sidebarIcon,
+        subList: [
+            'Subtitle1',  
+            'Subtitle2',  
+            'Subtitle3',  
+            'Subtitle4',  
+            'Subtitle5',  
+            'Subtitle6',  
+        ]
     },
     {
         title: 'Title2',
@@ -15,6 +23,14 @@ export const leftSidebarData = () => [
         title: 'Title3',
         direction: 'left',
         icon: sidebarIcon,
+        subList: [
+            'Subtitle1',  
+            'Subtitle2',  
+            'Subtitle3',  
+            'Subtitle4',  
+            'Subtitle5',  
+            'Subtitle6',  
+        ]
     },
     {
         title: 'Title4',

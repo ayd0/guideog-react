@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { Drawer } from "./styles/Drawer.styled";
+import { Drawer, Compartment } from "./styles/Drawer.styled";
 
 const Sidebar = ({ direction, sidebarData }) => {
     const [showDrawer, setShowDrawer] = useState(true);
-    const toggleShowDrawer = () => {
-        setShowDrawer(!showDrawer);
-        console.log(showDrawer, "clicked");
-    };
+    const [showCompartment, setShowCompartment] = useState(sidebarData().map((item => false)));
+    const toggleShowDrawer = () => setShowDrawer(!showDrawer);
+
+    console.log(showCompartment)
 
     return (
         <Drawer direction={direction} showDrawer={showDrawer}>
@@ -35,6 +35,19 @@ const Sidebar = ({ direction, sidebarData }) => {
                                     {item.icon}
                                 </>
                             )}
+                            {(() => {
+                                if (item.subList) {
+                                    return (
+                                        <Compartment>
+                                            {item.subList.map((item, idx) => {
+                                                return (
+                                                    <li key={idx}>{item}</li>
+                                                );
+                                            })}
+                                        </Compartment>
+                                    );
+                                }
+                            })()}
                         </li>
                     );
                 })}

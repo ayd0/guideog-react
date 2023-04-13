@@ -19,7 +19,7 @@ export const Drawer = styled.div`
     .show-btn {
         position: fixed;
         ${(props) => props.direction}: ${(props) =>
-    props.showDrawer ? 11.65 : 0}vw;
+    props.showDrawer ? 11.35 : 0}vw;
         transition: 450ms;
         top: 50vh;
         transform: scale(1.2, 2);
@@ -44,5 +44,16 @@ export const Drawer = styled.div`
             float: ${(props) =>
                 props.direction === "right" ? "left" : "right"};
         }
+    }
+`;
+
+export const Compartment = styled.div`
+    overflow: hidden;
+    &:hover {
+        cursor: pointer;
+    }
+    li:hover {
+        background: none !important;
+        text-decoration: underline;
     }
 `;
