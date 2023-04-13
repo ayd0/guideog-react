@@ -3,10 +3,15 @@ import { Drawer, Compartment } from "./styles/Drawer.styled";
 
 const Sidebar = ({ direction, sidebarData }) => {
     const [showDrawer, setShowDrawer] = useState(true);
-    const [showCompartment, setShowCompartment] = useState(sidebarData().map((item => false)));
+    const [showCompartment, setShowCompartment] = useState(
+        sidebarData().map((item) => false)
+    );
     const toggleShowDrawer = () => setShowDrawer(!showDrawer);
-
-    console.log(showCompartment)
+    const toggleShowCompartment = (idx) => {
+        let compartmentArr = [...showCompartment];
+        compartmentArr[idx] = !compartmentArr[idx];
+        setShowCompartment(compartmentArr);
+    };
 
     return (
         <Drawer direction={direction} showDrawer={showDrawer}>
@@ -23,10 +28,13 @@ const Sidebar = ({ direction, sidebarData }) => {
             <ul>
                 {sidebarData().map((item, index) => {
                     return (
-                        <li key={index}>
-                            {item.direction === "right" ? (
+                        <li
+                            key={index}
+                            onClick={() => toggleShowCompartment(index)}
+                        >
+                            {item.subList ? item.direction === "right" ? (
                                 <>
-                                    {item.icon}
+                                    {showCompartment[index] ? item.iconAlt : item.icon}
                                     {item.title}
                                 </>
                             ) : (
@@ -34,11 +42,17 @@ const Sidebar = ({ direction, sidebarData }) => {
                                     {item.title}
                                     {item.icon}
                                 </>
+                            ) : (
+                                <>
+                                    {item.title}
+                                </>
                             )}
                             {(() => {
                                 if (item.subList) {
                                     return (
-                                        <Compartment>
+                                        <Compartment
+                                            show={showCompartment[index]}
+                                        >
                                             {item.subList.map((item, idx) => {
                                                 return (
                                                     <li key={idx}>{item}</li>

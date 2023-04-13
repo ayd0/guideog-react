@@ -49,6 +49,7 @@ export const Drawer = styled.div`
 
 export const Compartment = styled.div`
     overflow: hidden;
+    display: ${(props) => (props.show ? "block" : "none")};
     &:hover {
         cursor: pointer;
     }
