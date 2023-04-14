@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const Drawer = styled.div`
     position: fixed;
-    top: 0;
+    top: ${(props) => props.navHeight}px;
     ${(props) => props.direction || "left"}: ${(props) =>
-    props.showDrawer ? 0 : -11.9}vw;
+    props.showDrawer ? 0 : -250}px;
     transition: 450ms;
     border-${(props) =>
         props.direction === "right"
@@ -13,13 +13,13 @@ export const Drawer = styled.div`
     text-align: ${(props) => props.direction || "left"};
     color: #fff;
     min-height: 100vh;
-    width: 12vw;
+    width: 250px;
     background: rgb(18,35,43);
     
     .show-btn {
         position: fixed;
         ${(props) => props.direction}: ${(props) =>
-    props.showDrawer ? 11.35 : 0}vw;
+    props.showDrawer ? 230 : 0}px;
         transition: 450ms;
         top: 50vh;
         transform: scale(1.2, 2);
@@ -35,8 +35,13 @@ export const Drawer = styled.div`
         padding: 0 !important;
     }
 
+    span {
+        display: block;
+        width: 100%;
+    }
+
     li {
-        padding: 3px 30px;
+        padding: 3px 40px;
         &:hover {
             background: rgba(100,100,100,.25);
         }
@@ -53,7 +58,10 @@ export const Compartment = styled.div`
     &:hover {
         cursor: pointer;
     }
-    li:hover {
+    p {
+        margin: 4px 20px;
+    }
+    p:hover {
         background: none !important;
         text-decoration: underline;
     }

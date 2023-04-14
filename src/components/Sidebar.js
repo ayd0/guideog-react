@@ -33,19 +33,19 @@ const Sidebar = ({ direction, sidebarData }) => {
                             onClick={() => toggleShowCompartment(index)}
                         >
                             {item.subList ? item.direction === "right" ? (
-                                <>
+                                <span>
                                     {showCompartment[index] ? item.iconAlt : item.icon}
                                     {item.title}
-                                </>
+                                </span>
                             ) : (
                                 <>
                                     {item.title}
-                                    {item.icon}
+                                    {showCompartment[index] ? item.iconAlt : item.icon}
                                 </>
                             ) : (
-                                <>
+                                <span>
                                     {item.title}
-                                </>
+                                </span>
                             )}
                             {(() => {
                                 if (item.subList) {
@@ -55,7 +55,7 @@ const Sidebar = ({ direction, sidebarData }) => {
                                         >
                                             {item.subList.map((item, idx) => {
                                                 return (
-                                                    <li key={idx}>{item}</li>
+                                                    <p key={idx}>{item}</p>
                                                 );
                                             })}
                                         </Compartment>

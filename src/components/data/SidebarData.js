@@ -3,62 +3,86 @@ const sidebarIconAlt = <i className='fa fa-angle-up' />;
 
 export const leftSidebarData = () => [
     {
-        title: 'Title1',
+        title: 'Category1',
         direction: 'left',
         icon: sidebarIcon,
         iconAlt: sidebarIconAlt,
         subList: [
-            'Subtitle1',  
-            'Subtitle2',  
-            'Subtitle3',  
-            'Subtitle4',  
-            'Subtitle5',  
-            'Subtitle6',  
+            'Guide1',  
+            'Guide2',  
+            'Guide3',  
+            'Guide4',  
+            'Guide5',  
+            'Guide6',  
         ]
     },
     {
-        title: 'Title2',
-        direction: 'left',
-        icon: sidebarIcon,
-        iconAlt: sidebarIconAlt
-    },
-    {
-        title: 'Title3',
+        title: 'Category2',
         direction: 'left',
         icon: sidebarIcon,
         iconAlt: sidebarIconAlt,
         subList: [
-            'Subtitle1',  
-            'Subtitle2',  
-            'Subtitle3',  
-            'Subtitle4',  
-            'Subtitle5',  
-            'Subtitle6',  
+            'Guide1',  
+            'Guide2',  
+            'Guide3',  
+            'Guide4',  
+            'Guide5',  
+            'Guide6',  
         ]
     },
     {
-        title: 'Title4',
+        title: 'Category3',
         direction: 'left',
         icon: sidebarIcon,
-        iconAlt: sidebarIconAlt
+        iconAlt: sidebarIconAlt,
+        subList: [
+            'Guide1',  
+            'Guide2',  
+            'Guide3',  
+            'Guide4',  
+            'Guide5',  
+            'Guide6',  
+        ]
     },
     {
-        title: 'Title5',
+        title: 'Category4',
         direction: 'left',
         icon: sidebarIcon,
-        iconAlt: sidebarIconAlt
+        iconAlt: sidebarIconAlt,
+        subList: [
+            'Guide1',  
+            'Guide2',  
+            'Guide3',  
+            'Guide4',  
+            'Guide5',  
+            'Guide6',  
+        ]
+    },
+    {
+        title: 'Category5',
+        direction: 'left',
+        icon: sidebarIcon,
+        iconAlt: sidebarIconAlt,
+        subList: [
+            'Guide1',  
+            'Guide2',  
+            'Guide3',  
+            'Guide4',  
+            'Guide5',  
+            'Guide6',  
+        ]
     }
 ];
 
 export const rightSidebarData = () => [
     {
-        title: 'Title1',
+        title: 'Step1',
         direction: 'right',
         icon: sidebarIcon,
         iconAlt: sidebarIconAlt
     },
     {
-        title: 'Title2',
+        title: 'Step2',
         direction: 'right',
         icon: sidebarIcon,
         iconAlt: sidebarIconAlt,
@@ -72,7 +96,7 @@ export const rightSidebarData = () => [
         ]
     },
     {
-        title: 'Title3',
+        title: 'Step3',
         direction: 'right',
         icon: sidebarIcon,
         iconAlt: sidebarIconAlt,
@@ -86,13 +110,13 @@ export const rightSidebarData = () => [
         ]
     },
     {
-        title: 'Title4',
+        title: 'Step4',
         direction: 'right',
         icon: sidebarIcon,
         iconAlt: sidebarIconAlt
     },
     {
-        title: 'Title5',
+        title: 'Step5',
         direction: 'right',
         icon: sidebarIcon,
         iconAlt: sidebarIconAlt
